@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "pranayama-timer.netlify",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "pranayama-timer.netlify",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
