@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pranayama Breath Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+</head>
+<body>
+  <div class="container">
+    <img src="image/logo 11.png"
+    alt="logo" style="width: 100px; height: auto:">
+    <h1>Pranayama</h1>
+    <h2>Breath Timer</h2>
+
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <ul>
+        <li>Set your preferred inhale, hold, and exhale times below.</li>
+
+        <li>Click <b>Start</b> to begin the breathing cycle.</li>
+        <li>Use <b>Pause</b> to pause, and <b>Reset</b> to restart.</li>
+        <li>Completed cycles are saved in history & chart.</li>
+        <li>You can <b>Download</b> or <b>Clear</b> your history anytime.</li>
+      </ul>
+    </div>
+
+    <div class="custom-settings">
+      <label>Inhale (seconds): 
+        <input type="number" id="inhaleInput" value="4" min="1">
+      </label>
+      <label>Hold (seconds): 
+        <input type="number" id="holdInput" value="2" min="1">
+      </label>
+      <label>Exhale (seconds): 
+        <input type="number" id="exhaleInput" value="4" min="1">
+      </label>
+    </div>
+
+    <div class="timer-display">
+      <p id="phase">Press Start</p>
+      <h1 id="time">00</h1>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resetBtn">Reset</button>
+     
+    </div>
+
+    <div class="history">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div class="chart-container">
+      <h3>Your Progress</h3>
+      <canvas id="historyChart"></canvas>
+   
+   <div class="buttons">
+      
+      <button id="downloadBtn">Download History</button>
+      <button id="clearHistoryBtn">Clear History</button>
+        <button id="downloadPdfBtn">Download PDF Report</button> <!-- NEW -->
+  <button id="clearHistoryBtn">Clear History</button>
+    <button id="downloadChartBtn">Download Chart</button>
+     <select id="reportRange">
+    <option value="all">All Time</option>
+    <option value="7">Last 7 Days</option>
+    <option value="30">Last 30 Days</option>
+  </select>
+    
+    </div>
+     </div>
+  </div>
+  <!-- jsPDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
